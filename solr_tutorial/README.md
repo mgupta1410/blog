@@ -1,37 +1,37 @@
-## Welcome to GitHub Pages
+## Apache Solr Quick Install
 
-You can use the [editor on GitHub](https://github.com/mgupta1410/blog/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+April 22, 2019
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The instructions on the Apache Solr website are not very clear, and the download links are broken. This tutorial might be helpful. 
 
-### Markdown
+_(Tested for Solr 8.0.0)_
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+- Get the desired version from [Apache Solr Archives](https://archive.apache.org/dist/lucene/solr/) and extract.
+```
+wget https://archive.apache.org/dist/lucene/solr/8.0.0/solr-8.0.0.tgz
+tar -zxvf solr-8.0.0.tgz
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+_Note that solr-x.x.x-src.tgz contains the source files, and needs to be compiled, for pre-compiled binaries make sure to download solr-x.x.x.tgz._
 
-### Jekyll Themes
+- Provide appropriate permissions 
+```
+chmod -R 755 solr-8.0.0
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mgupta1410/blog/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+- Start the server 
+```
+cd solr-8.0.0 
+./bin/solr start -e cloud
+```
 
-### Support or Contact
+Expected Output
+```
+Welcome to the SolrCloud example!
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+This interactive session will help you launch a SolrCloud cluster on your local workstation.
+To begin, how many Solr nodes would you like to run in your local cluster? (specify 1-4 nodes)
+```
+
+- You are good to go! Follow further instructions from the [Solr website](https://lucene.apache.org/solr/guide/7_0/solr-tutorial.html#exercise-1)
+- Enjoy searching! 
