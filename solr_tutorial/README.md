@@ -12,7 +12,7 @@ wget https://archive.apache.org/dist/lucene/solr/8.0.0/solr-8.0.0.tgz
 tar -zxvf solr-8.0.0.tgz
 ```
 
-⋅⋅⋅_Note that solr-x.x.x-src.tgz contains the source files, and needs to be compiled, for pre-compiled binaries make sure to download solr-x.x.x.tgz._
+_Note that solr-x.x.x-src.tgz contains the source files, and needs to be compiled, for pre-compiled binaries make sure to download solr-x.x.x.tgz._
 
 - Provide appropriate permissions 
 ```
@@ -25,7 +25,7 @@ cd solr-8.0.0
 ./bin/solr start -e cloud
 ```
 
-⋅⋅⋅Expected Output
+Expected Output
 ```
 Welcome to the SolrCloud example!
 
