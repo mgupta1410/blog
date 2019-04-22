@@ -1,0 +1,3 @@
+[submodule "NER-data-standardization"]
+	path = NER-data-standardization
+	url = git@github.com:mgupta1410/NER-data-standardization.git
