@@ -11,7 +11,8 @@ _(Tested for Solr 8.0.0)_
 wget https://archive.apache.org/dist/lucene/solr/8.0.0/solr-8.0.0.tgz
 tar -zxvf solr-8.0.0.tgz
 ```
-..._Note that solr-x.x.x-src.tgz contains the source files, and needs to be compiled, for pre-compiled binaries make sure to download solr-x.x.x.tgz._
+
+⋅⋅⋅_Note that solr-x.x.x-src.tgz contains the source files, and needs to be compiled, for pre-compiled binaries make sure to download solr-x.x.x.tgz._
 
 - Provide appropriate permissions 
 ```
@@ -23,5 +24,14 @@ chmod -R 755 solr-8.0.0
 cd solr-8.0.0 
 ./bin/solr start -e cloud
 ```
-- Follow further instructions from the [Solr website](https://lucene.apache.org/solr/guide/7_0/solr-tutorial.html#exercise-1)
+
+⋅⋅⋅Expected Output
+```
+Welcome to the SolrCloud example!
+
+This interactive session will help you launch a SolrCloud cluster on your local workstation.
+To begin, how many Solr nodes would you like to run in your local cluster? (specify 1-4 nodes)
+```
+
+- You are good to go! Follow further instructions from the [Solr website](https://lucene.apache.org/solr/guide/7_0/solr-tutorial.html#exercise-1)
 - Enjoy searching! 
